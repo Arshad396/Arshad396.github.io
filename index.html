@@ -9,14 +9,14 @@
     * {
       box-sizing: border-box;
       margin: 0; padding: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     html {
       scroll-behavior: smooth;
     }
     body {
-      background: #0f1624;
-      color: #e0e6f1;
+      background: #fff;
+      color: #222;
       line-height: 1.6;
       font-size: 18px;
       min-height: 100vh;
@@ -24,17 +24,19 @@
       flex-direction: column;
     }
     a {
-      color: #66fcf1;
+      color: #111;
       text-decoration: none;
-      transition: color 0.3s ease;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+      cursor: pointer;
     }
     a:hover {
-      color: #45a29e;
+      border-color: #555;
     }
 
     /* Container */
     .container {
-      max-width: 960px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 40px 20px;
       flex-grow: 1;
@@ -46,22 +48,23 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
-      background: #1f2a40;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      border-bottom: 1px solid #ddd;
       position: sticky;
       top: 0;
+      background: #fff;
       z-index: 1000;
     }
     header h1 {
       font-weight: 700;
       font-size: 1.8rem;
-      letter-spacing: 2px;
-      color: #66fcf1;
+      letter-spacing: 1px;
+      color: #111;
     }
     nav a {
       margin-left: 25px;
       font-weight: 600;
-      letter-spacing: 1.1px;
+      letter-spacing: 0.8px;
+      font-size: 0.95rem;
     }
 
     /* Hero Section */
@@ -70,63 +73,58 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 75vh;
+      height: 70vh;
       text-align: center;
       padding: 0 20px;
     }
     .hero h2 {
-      font-size: 3rem;
+      font-size: 2.8rem;
       margin-bottom: 10px;
-      color: #45a29e;
-      animation: fadeInUp 1s ease forwards;
-      opacity: 0;
-      animation-delay: 0.2s;
+      color: #111;
+      font-weight: 700;
     }
     .hero p {
-      font-size: 1.25rem;
-      color: #a0bcd6;
+      font-size: 1.15rem;
+      color: #555;
       margin-bottom: 30px;
       max-width: 600px;
-      animation: fadeInUp 1s ease forwards;
-      opacity: 0;
-      animation-delay: 0.4s;
+      line-height: 1.5;
     }
     .hero a.button {
-      background: #66fcf1;
-      color: #0f1624;
+      background: #111;
+      color: #fff;
       font-weight: 700;
-      padding: 15px 30px;
-      border-radius: 50px;
-      box-shadow: 0 8px 20px rgba(102,252,241,0.5);
+      padding: 14px 32px;
+      border-radius: 30px;
       transition: background 0.3s ease;
-      animation: fadeInUp 1s ease forwards;
-      opacity: 0;
-      animation-delay: 0.6s;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
     }
     .hero a.button:hover {
-      background: #45a29e;
-      box-shadow: 0 8px 20px rgba(69,162,158,0.6);
+      background: #555;
     }
 
     /* Sections */
     section {
-      margin-bottom: 80px;
+      margin-bottom: 70px;
     }
     section h3 {
       font-size: 2rem;
-      margin-bottom: 25px;
-      color: #66fcf1;
-      border-bottom: 2px solid #45a29e;
-      padding-bottom: 8px;
+      margin-bottom: 20px;
+      color: #111;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 6px;
       max-width: fit-content;
+      font-weight: 700;
     }
 
     /* About Me */
     #about p {
       max-width: 700px;
       font-size: 1.1rem;
-      color: #c1d1e8;
-      line-height: 1.7;
+      color: #444;
+      line-height: 1.6;
     }
 
     /* Skills */
@@ -134,52 +132,76 @@
       list-style: none;
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 16px;
     }
     #skills li {
-      background: #1f2a40;
-      padding: 10px 18px;
-      border-radius: 20px;
+      background: #f7f7f7;
+      padding: 10px 16px;
+      border-radius: 16px;
       font-weight: 600;
-      color: #66fcf1;
-      box-shadow: 0 3px 8px rgba(102,252,241,0.3);
-      transition: transform 0.3s ease;
+      color: #222;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      user-select: none;
       cursor: default;
+      transition: box-shadow 0.2s ease;
     }
     #skills li:hover {
-      transform: scale(1.1);
-      color: #45a29e;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     /* Projects */
-    #projects .project-card {
-      background: #1f2a40;
-      border-radius: 12px;
+    #projects {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .project-card {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      border: 1px solid #ddd;
       padding: 20px;
-      margin-bottom: 25px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+      border-radius: 12px;
+      align-items: center;
       transition: box-shadow 0.3s ease;
     }
-    #projects .project-card:hover {
-      box-shadow: 0 6px 25px rgba(69,162,158,0.7);
+    .project-card:hover {
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     }
-    #projects .project-card h4 {
-      color: #66fcf1;
+    .project-image {
+      width: 140px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .project-image:hover {
+      transform: scale(1.05);
+    }
+    .project-content {
+      flex: 1;
+    }
+    .project-content h4 {
       margin-bottom: 8px;
-    }
-    #projects .project-card p {
-      color: #a0bcd6;
-      margin-bottom: 12px;
-    }
-    #projects .project-card a {
       font-weight: 700;
+      color: #111;
+    }
+    .project-content p {
+      margin-bottom: 12px;
+      color: #555;
+      line-height: 1.4;
+    }
+    .project-content a {
+      font-weight: 600;
       font-size: 0.95rem;
-      color: #45a29e;
-      border-bottom: 2px solid transparent;
+      color: #111;
+      border-bottom: 1px solid transparent;
       transition: border-color 0.3s ease;
     }
-    #projects .project-card a:hover {
-      border-color: #45a29e;
+    .project-content a:hover {
+      border-color: #555;
     }
 
     /* Contact */
@@ -187,38 +209,37 @@
       max-width: 480px;
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 16px;
     }
     #contact input,
     #contact textarea {
       padding: 12px 15px;
       border-radius: 8px;
-      border: none;
+      border: 1px solid #ccc;
       font-size: 1rem;
-      background: #16202e;
-      color: #c1d1e8;
+      color: #222;
       resize: none;
-      box-shadow: inset 0 2px 5px rgba(0,0,0,0.7);
-      transition: background 0.3s ease;
+      transition: border-color 0.3s ease;
     }
     #contact input:focus,
     #contact textarea:focus {
       outline: none;
-      background: #0f1624;
-      box-shadow: 0 0 8px #66fcf1;
+      border-color: #888;
     }
     #contact button {
-      background: #66fcf1;
-      color: #0f1624;
+      background: #111;
+      color: #fff;
       font-weight: 700;
       padding: 15px;
-      border-radius: 50px;
+      border-radius: 30px;
       border: none;
       cursor: pointer;
       transition: background 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
     }
     #contact button:hover {
-      background: #45a29e;
+      background: #555;
     }
 
     /* Footer */
@@ -226,25 +247,13 @@
       text-align: center;
       padding: 20px 0;
       font-size: 0.9rem;
-      color: #4c5c72;
-      background: #1f2a40;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      color: #777;
+      border-top: 1px solid #ddd;
+      background: #fff;
     }
 
     /* Responsive */
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       header {
         flex-direction: column;
         padding: 15px 20px;
@@ -254,7 +263,7 @@
         font-size: 0.9rem;
       }
       .hero h2 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
       }
       .hero p {
         font-size: 1rem;
@@ -262,9 +271,16 @@
       #skills ul {
         justify-content: center;
       }
+      .project-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .project-image {
+        width: 100%;
+        height: auto;
+      }
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -309,21 +325,34 @@
 
     <section id="projects">
       <h3>Projects</h3>
-      <div class="project-card">
-        <h4>Real-time Stock Price Predictor</h4>
-        <p>Built a Flask API that scrapes and predicts stock prices using machine learning models with Yahoo Finance data.</p>
-        <a href="https://github.com/arshad396/stock-price-predictor" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h4>Customer Churn Analysis</h4>
-        <p>Performed exploratory data analysis and built classification models to predict customer churn and improve retention strategies.</p>
-        <a href="https://github.com/arshad396/customer-churn-analysis" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h4>Interactive Power BI Dashboards</h4>
-        <p>Designed interactive business intelligence dashboards to visualize key performance metrics and trends.</p>
-        <a href="https://github.com/arshad396/powerbi-dashboards" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-      </div>
+
+      <a href="https://github.com/arshad396/stock-price-predictor" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Real-time Stock Price Predictor GitHub repository">
+        <img class="project-image" src="https://via.placeholder.com/280x180?text=Stock+Price+Predictor" alt="Real-time Stock Price Predictor project screenshot" />
+        <div class="project-content">
+          <h4>Real-time Stock Price Predictor</h4>
+          <p>Built a Flask API that scrapes and predicts stock prices using machine learning models with Yahoo Finance data.</p>
+          <span>View on GitHub →</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/arshad396/customer-churn-analysis" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Customer Churn Analysis GitHub repository">
+        <img class="project-image" src="https://via.placeholder.com/280x180?text=Customer+Churn+Analysis" alt="Customer Churn Analysis project screenshot" />
+        <div class="project-content">
+          <h4>Customer Churn Analysis</h4>
+          <p>Performed exploratory data analysis and built classification models to predict customer churn and improve retention strategies.</p>
+          <span>View on GitHub →</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/arshad396/powerbi-dashboards" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Interactive Power BI Dashboards GitHub repository">
+        <img class="project-image" src="https://via.placeholder.com/280x180?text=Power+BI+Dashboards" alt="Interactive Power BI Dashboards project screenshot" />
+        <div class="project-content">
+          <h4>Interactive Power BI Dashboards</h4>
+          <p>Designed interactive business intelligence dashboards to visualize key performance metrics and trends.</p>
+          <span>View on GitHub →</span>
+        </div>
+      </a>
+
     </section>
 
     <section id="contact">
@@ -338,9 +367,10 @@
   </main>
 
   <footer>
-    &copy; 2025 Arshad Ansari — Built with ❤️ and Data
+    &copy; 2025 Arshad Ansari — Built with minimal design
   </footer>
 </body>
 </html>
+
 
 
