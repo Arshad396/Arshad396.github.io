@@ -15,8 +15,8 @@
       scroll-behavior: smooth;
     }
     body {
-      background: #fff;
-      color: #222;
+      background: #121212;
+      color: #eee;
       line-height: 1.6;
       font-size: 18px;
       min-height: 100vh;
@@ -24,14 +24,14 @@
       flex-direction: column;
     }
     a {
-      color: #111;
+      color: #ddd;
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: border-color 0.3s ease;
       cursor: pointer;
     }
     a:hover {
-      border-color: #555;
+      border-color: #aaa;
     }
 
     /* Container */
@@ -48,17 +48,17 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #333;
       position: sticky;
       top: 0;
-      background: #fff;
+      background: #121212;
       z-index: 1000;
     }
     header h1 {
       font-weight: 700;
       font-size: 1.8rem;
       letter-spacing: 1px;
-      color: #111;
+      color: #eee;
     }
     nav a {
       margin-left: 25px;
@@ -80,19 +80,19 @@
     .hero h2 {
       font-size: 2.8rem;
       margin-bottom: 10px;
-      color: #111;
+      color: #eee;
       font-weight: 700;
     }
     .hero p {
       font-size: 1.15rem;
-      color: #555;
+      color: #bbb;
       margin-bottom: 30px;
       max-width: 600px;
       line-height: 1.5;
     }
     .hero a.button {
-      background: #111;
-      color: #fff;
+      background: #eee;
+      color: #121212;
       font-weight: 700;
       padding: 14px 32px;
       border-radius: 30px;
@@ -102,7 +102,7 @@
       letter-spacing: 1.5px;
     }
     .hero a.button:hover {
-      background: #555;
+      background: #ccc;
     }
 
     /* Sections */
@@ -112,8 +112,8 @@
     section h3 {
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #111;
-      border-bottom: 2px solid #ccc;
+      color: #eee;
+      border-bottom: 2px solid #555;
       padding-bottom: 6px;
       max-width: fit-content;
       font-weight: 700;
@@ -123,7 +123,7 @@
     #about p {
       max-width: 700px;
       font-size: 1.1rem;
-      color: #444;
+      color: #ccc;
       line-height: 1.6;
     }
 
@@ -135,18 +135,18 @@
       gap: 16px;
     }
     #skills li {
-      background: #f7f7f7;
+      background: #222;
       padding: 10px 16px;
       border-radius: 16px;
       font-weight: 600;
-      color: #222;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      color: #eee;
+      box-shadow: 0 2px 6px rgba(255,255,255,0.1);
       user-select: none;
       cursor: default;
       transition: box-shadow 0.2s ease;
     }
     #skills li:hover {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(255,255,255,0.15);
     }
 
     /* Projects */
@@ -159,14 +159,15 @@
       display: flex;
       flex-direction: row;
       gap: 24px;
-      border: 1px solid #ddd;
+      border: 1px solid #333;
       padding: 20px;
       border-radius: 12px;
       align-items: center;
       transition: box-shadow 0.3s ease;
+      background: #181818;
     }
     .project-card:hover {
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 18px rgba(255,255,255,0.12);
     }
     .project-image {
       width: 140px;
@@ -174,11 +175,13 @@
       object-fit: cover;
       border-radius: 8px;
       flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 8px rgba(255,255,255,0.05);
       transition: transform 0.3s ease;
+      filter: brightness(0.9);
     }
     .project-image:hover {
       transform: scale(1.05);
+      filter: brightness(1);
     }
     .project-content {
       flex: 1;
@@ -186,22 +189,23 @@
     .project-content h4 {
       margin-bottom: 8px;
       font-weight: 700;
-      color: #111;
+      color: #eee;
     }
     .project-content p {
       margin-bottom: 12px;
-      color: #555;
+      color: #bbb;
       line-height: 1.4;
     }
-    .project-content a {
+    .project-content span {
       font-weight: 600;
       font-size: 0.95rem;
-      color: #111;
+      color: #ddd;
       border-bottom: 1px solid transparent;
       transition: border-color 0.3s ease;
+      cursor: pointer;
     }
-    .project-content a:hover {
-      border-color: #555;
+    .project-content span:hover {
+      border-color: #aaa;
     }
 
     /* Contact */
@@ -215,9 +219,10 @@
     #contact textarea {
       padding: 12px 15px;
       border-radius: 8px;
-      border: 1px solid #ccc;
+      border: 1px solid #444;
+      background: #222;
       font-size: 1rem;
-      color: #222;
+      color: #eee;
       resize: none;
       transition: border-color 0.3s ease;
     }
@@ -225,10 +230,11 @@
     #contact textarea:focus {
       outline: none;
       border-color: #888;
+      background: #2b2b2b;
     }
     #contact button {
-      background: #111;
-      color: #fff;
+      background: #eee;
+      color: #121212;
       font-weight: 700;
       padding: 15px;
       border-radius: 30px;
@@ -239,7 +245,7 @@
       letter-spacing: 1.2px;
     }
     #contact button:hover {
-      background: #555;
+      background: #ccc;
     }
 
     /* Footer */
@@ -247,9 +253,9 @@
       text-align: center;
       padding: 20px 0;
       font-size: 0.9rem;
-      color: #777;
-      border-top: 1px solid #ddd;
-      background: #fff;
+      color: #888;
+      border-top: 1px solid #333;
+      background: #121212;
     }
 
     /* Responsive */
@@ -371,6 +377,5 @@
   </footer>
 </body>
 </html>
-
 
 
