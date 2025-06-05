@@ -16,26 +16,26 @@
       background-color: #000;
       color: #fff;
       font-size: 18px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
-   .container {
-     max-width: 1200px;
-     margin: 0 auto;
-     padding: 2rem;
-}
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
+      padding: 1.5rem 2rem;
       background: #111;
     }
     nav a {
       color: #fff;
       margin-left: 2rem;
       text-decoration: none;
-      font-weight: 400;
-      font-size: 1.1rem:
+      font-weight: 500;
+      font-size: 1.25rem;
     }
     .hero {
       display: flex;
@@ -44,48 +44,52 @@
       align-items: center;
       padding: 6rem 2rem;
     }
-
     .hero-text {
       max-width: 600px;
     }
-    
     .hero-text h1 {
-      font-size: 3rem;
+      font-size: 3.75rem;
       font-weight: 800;
       margin-bottom: 1rem;
     }
-    .highlight {
-      color: #f50057;
-    }
     .hero-text p {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       margin-bottom: 2rem;
     }
-
     .highlight {
       color: #f50057;
     }
-    
     .resume-btn {
-      padding: 0.75rem 1.5rem;
+      padding: 1rem 2rem;
       background-color: #f50057;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.1rem;
     }
     .hero-img img {
       width: 400px;
       max-width: 100%;
-      border-radius: 10px;
+      border-radius: 12px;
     }
     .section {
       padding: 5rem 2rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+    .info-block p,
+    .info-block li {
+      font-size: 1.2rem;
     }
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2.5rem;
+      margin-top: 2rem;
     }
     .projects img {
       width: 100%;
@@ -96,147 +100,145 @@
     .projects img:hover {
       transform: scale(1.05);
     }
-    h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1.5rem;
-    }
-    .info-block {
-      margin-bottom: 3rem;
-    }
     footer {
       text-align: center;
-      padding: 2.5rem 1 rem;
+      padding: 3rem 1rem;
       background: #111;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #aaa;
     }
-    
     .contact-info p,
     .contact-info a {
-      font-size: 1.2rem;
-      margin: 0.6rem 0;
+      font-size: 1.25rem;
+      margin: 0.75rem 0;
       color: #ddd;
       display: block;
     }
     .message-form {
-      margin-top: 2.5rem;
+      margin-top: 3rem;
       max-width: 600px;
+    }
+    .message-form h3 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
     }
     .message-form input,
     .message-form textarea {
       width: 100%;
       padding: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       border: none;
       border-radius: 6px;
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
     .message-form button {
       background-color: #f50057;
       color: #fff;
       border: none;
-      padding: 0.9rem 2rem;
+      padding: 1rem 2rem;
       border-radius: 6px;
       font-weight: bold;
       cursor: pointer;
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   </style>
 </head>
 <body>
-  <div class="container>
-  <header>
-    <h1 style="color: white; font-weight: 800;">Arshad<span class="highlight">.</span></h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <h1 style="color: white; font-weight: 800;">Arshad<span class="highlight">.</span></h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <section class="hero" id="resume">
-    <div class="hero-text">
-      <p>Data Analyst | AI Enthusiast</p>
-      <h1>Hi, I'm <span class="highlight">Arshad</span></h1>
-      <p>Driven by data, built on purpose.</p>
-      <a class="resume-btn" href="https://drive.google.com/file/d/1BRLtQnbOkw1EWNcCzvBVjrFHBPCU6v1b/view?usp=drive_link" target="_blank">Download Resume</a>
-    </div>
-    <div class="hero-img">
-      <img src="Profile image.png" alt="Shaik Arshad Ansari" />
-    </div>
-  </section>
+    <section class="hero" id="resume">
+      <div class="hero-text">
+        <p>Data Analyst | AI Enthusiast</p>
+        <h1>Hi, I'm <span class="highlight">Arshad</span></h1>
+        <p>Driven by data, built on purpose.</p>
+        <a class="resume-btn" href="https://drive.google.com/file/d/1BRLtQnbOkw1EWNcCzvBVjrFHBPCU6v1b/view?usp=drive_link" target="_blank">Download Resume</a>
+      </div>
+      <div class="hero-img">
+        <img src="Profile image.png" alt="Shaik Arshad Ansari" />
+      </div>
+    </section>
 
-  <section class="section" id="about">
-    <h2>Education</h2>
-    <div class="info-block">
-      <p><strong>M.Sc Data Science:</strong> Manipal Academy of Higher Education (2025 – Present)</p>
-      <p><strong>Machine Learning/AI:</strong> GUVI Geek Networks, IITM Research Park (2023 – 2024)</p>
-      <p><strong>M.Tech Construction Technology and Management:</strong> Koneru Lakshmaiah University (2019 – 2021)</p>
-      <p><strong>B.Tech Civil Engineering:</strong> Gudlavalleru Engineering College (2014 – 2018)</p>
-    </div>
+    <section class="section" id="about">
+      <h2>Education</h2>
+      <div class="info-block">
+        <p><strong>M.Sc Data Science:</strong> Manipal Academy of Higher Education (2025 – Present)</p>
+        <p><strong>Machine Learning/AI:</strong> GUVI Geek Networks, IITM Research Park (2023 – 2024)</p>
+        <p><strong>M.Tech Construction Technology and Management:</strong> Koneru Lakshmaiah University (2019 – 2021)</p>
+        <p><strong>B.Tech Civil Engineering:</strong> Gudlavalleru Engineering College (2014 – 2018)</p>
+      </div>
 
-    <h2>Experience</h2>
-    <div class="info-block">
-      <p><strong>Data Analyst – Unified Mentor (Feb 2025 – Apr 2025)</strong></p>
-      <ul>
-        <li>Built dashboards with Power BI, SQL, Excel for campaign metrics</li>
-        <li>Performed root cause analysis and implemented data quality checks</li>
-        <li>Created reusable Python workflows and supported product experimentation</li>
-      </ul>
-    </div>
+      <h2>Experience</h2>
+      <div class="info-block">
+        <p><strong>Data Analyst – Unified Mentor (Feb 2025 – Apr 2025)</strong></p>
+        <ul>
+          <li>Built dashboards with Power BI, SQL, Excel for campaign metrics</li>
+          <li>Performed root cause analysis and implemented data quality checks</li>
+          <li>Created reusable Python workflows and supported product experimentation</li>
+        </ul>
+      </div>
 
-    <h2>Certifications</h2>
-    <div class="info-block">
-      <p>• Google Data Analytics Certificate</p>
-      <p>• SQL - HackerRank Certification</p>
-      <p>• Forage - Data Analyst Certifications</p>
-    </div>
-  </section>
+      <h2>Certifications</h2>
+      <div class="info-block">
+        <p>• Google Data Analytics Certificate</p>
+        <p>• SQL - HackerRank Certification</p>
+        <p>• Forage - Data Analyst Certifications</p>
+      </div>
+    </section>
 
-  <section class="section" id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <a href="https://github.com/Arshad396/Web-Scrapping-Projects" target="_blank">
-        <img src="web scraping image.png" alt="Web Scraping Project" />
-      </a>
-      <a href="https://github.com/Arshad396/Excel-Projects" target="_blank">
-        <img src="Excel project image 2.png" alt="Excel Dashboard Project" />
-      </a>
-      <a href="https://github.com/Arshad396/Tableau-and-Power-BI-Projects" target="_blank">
-        <img src="Power BI and tableau image.png" alt="Power BI Project" />
-      </a>
-      <a href="https://github.com/Arshad396/ML-and-DL-Projects/blob/main/Data%20Visualization%20Project/Project_3/README%20(10).md" target="_blank">
-        <img src="ml&dp pprojects.png" alt="ML and Dp project" />
-      </a>
-    </div>
-  </section>
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <a href="https://github.com/Arshad396/Web-Scrapping-Projects" target="_blank">
+          <img src="web scraping image.png" alt="Web Scraping Project" />
+        </a>
+        <a href="https://github.com/Arshad396/Excel-Projects" target="_blank">
+          <img src="Excel project image 2.png" alt="Excel Dashboard Project" />
+        </a>
+        <a href="https://github.com/Arshad396/Tableau-and-Power-BI-Projects" target="_blank">
+          <img src="Power BI and tableau image.png" alt="Power BI Project" />
+        </a>
+        <a href="https://github.com/Arshad396/ML-and-DL-Projects/blob/main/Data%20Visualization%20Project/Project_3/README%20(10).md" target="_blank">
+          <img src="ml&dp pprojects.png" alt="ML and Dp project" />
+        </a>
+      </div>
+    </section>
 
-  <section class="section" id="contact">
-    <h2>Contact</h2>
-    <div class="contact-info">
-      <p>Email: <a href="mailto:arshadshaik396@gmail.com">arshadshaik396@gmail.com</a></p>
-      <p>Phone: <a href="tel:+919182920820">+91 91829 20820</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/shaikarshadansari/" target="_blank">linkedin.com/in/shaikarshadansari</a></p>
-      <p>GitHub: <a href="https://github.com/Arshad396" target="_blank">github.com/Arshad396</a></p>
-    </div>
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <div class="contact-info">
+        <p>Email: <a href="mailto:arshadshaik396@gmail.com">arshadshaik396@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919182920820">+91 91829 20820</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/shaikarshadansari/" target="_blank">linkedin.com/in/shaikarshadansari</a></p>
+        <p>GitHub: <a href="https://github.com/Arshad396" target="_blank">github.com/Arshad396</a></p>
+      </div>
 
-    <div class="message-form">
-      <h3>Send me a message</h3>
-      <form>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </section>
+      <div class="message-form">
+        <h3>Send me a message</h3>
+        <form>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Shaik Arshad Ansari. Built with simplicity.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Shaik Arshad Ansari. Built with simplicity.</p>
+    </footer>
+  </div>
 </body>
 </html>
+
 
 
 
