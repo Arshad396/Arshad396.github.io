@@ -2,448 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arshad Ansari | Data Scientist & AI Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arshad | Data Scientist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
   <style>
-    /* Reset & basics */
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
-      margin: 0; padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    html {
-      scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
     }
     body {
-      background: #121212;
-      color: #eee;
-      line-height: 1.6;
-      font-size: 18px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      background-color: #000;
+      color: #fff;
     }
-    a {
-      color: #ddd;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s ease;
-      cursor: pointer;
-    }
-    a:hover {
-      border-color: #aaa;
-    }
-
-    /* Container */
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      flex-grow: 1;
-    }
-
-    /* Header */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
-      border-bottom: 1px solid #333;
-      position: sticky;
-      top: 0;
-      background: #121212;
-      z-index: 1000;
-    }
-    header h1 {
-      font-weight: 700;
-      font-size: 1.8rem;
-      letter-spacing: 1px;
-      color: #eee;
+      padding: 1rem 2rem;
+      background: #111;
     }
     nav a {
-      margin-left: 25px;
-      font-weight: 600;
-      letter-spacing: 0.8px;
-      font-size: 0.95rem;
+      color: #fff;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 300;
     }
-
-    /* Hero Section */
     .hero {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      height: 70vh;
-      text-align: center;
-      padding: 0 20px;
+      padding: 5rem 2rem;
     }
-    .hero h2 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      color: #eee;
-      font-weight: 700;
+    .hero-text h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
     }
-    .hero p {
-      font-size: 1.15rem;
-      color: #bbb;
-      margin-bottom: 30px;
-      max-width: 600px;
-      line-height: 1.5;
+    .highlight {
+      color: #f50057;
     }
-    .hero a.button {
-      background: #eee;
-      color: #121212;
-      font-weight: 700;
-      padding: 14px 32px;
-      border-radius: 30px;
-      transition: background 0.3s ease;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      letter-spacing: 1.5px;
-      margin-bottom: 20px;
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
-    .hero a.button:hover {
-      background: #ccc;
+    .resume-btn {
+      padding: 0.75rem 1.5rem;
+      background-color: #f50057;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
     }
-
-    /* Sections */
-    section {
-      margin-bottom: 70px;
+    .hero-img img {
+      width: 350px;
+      border-radius: 10px;
     }
-    section h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #eee;
-      border-bottom: 2px solid #555;
-      padding-bottom: 6px;
-      max-width: fit-content;
-      font-weight: 700;
+    .section {
+      padding: 4rem 2rem;
     }
-
-    /* About Me */
-    #about p {
-      max-width: 700px;
-      font-size: 1.1rem;
-      color: #ccc;
-      line-height: 1.6;
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
     }
-
-    /* Skills */
-    #skills ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    #skills li {
-      background: #222;
-      padding: 10px 16px;
-      border-radius: 16px;
-      font-weight: 600;
-      color: #eee;
-      box-shadow: 0 2px 6px rgba(255,255,255,0.1);
-      user-select: none;
-      cursor: default;
-      transition: box-shadow 0.2s ease;
-    }
-    #skills li:hover {
-      box-shadow: 0 4px 12px rgba(255,255,255,0.15);
-    }
-
-    /* Projects */
-    #projects {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-    .project-card {
-      display: flex;
-      flex-direction: row;
-      gap: 24px;
-      border: 1px solid #333;
-      padding: 20px;
-      border-radius: 12px;
-      align-items: center;
-      transition: box-shadow 0.3s ease;
-      background: #181818;
-    }
-    .project-card:hover {
-      box-shadow: 0 6px 18px rgba(255,255,255,0.12);
-    }
-    .project-image {
-      width: 140px;
-      height: 90px;
-      object-fit: cover;
+    .projects img {
+      width: 100%;
       border-radius: 8px;
-      flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(255,255,255,0.05);
-      transition: transform 0.3s ease;
-      filter: brightness(0.9);
+      cursor: pointer;
+      transition: 0.3s;
     }
-    .project-image:hover {
+    .projects img:hover {
       transform: scale(1.05);
-      filter: brightness(1);
     }
-    .project-content {
-      flex: 1;
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
-    .project-content h4 {
-      margin-bottom: 8px;
-      font-weight: 700;
-      color: #eee;
+    .info-block {
+      margin-bottom: 2rem;
     }
-    .project-content p {
-      margin-bottom: 12px;
-      color: #bbb;
-      line-height: 1.4;
-    }
-    .project-content span {
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: #ddd;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s ease;
-      cursor: pointer;
-    }
-    .project-content span:hover {
-      border-color: #aaa;
-    }
-
-    /* Contact */
-    #contact form {
-      max-width: 480px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    #contact input,
-    #contact textarea {
-      padding: 12px 15px;
-      border-radius: 8px;
-      border: 1px solid #444;
-      background: #222;
-      font-size: 1rem;
-      color: #eee;
-      resize: none;
-      transition: border-color 0.3s ease;
-    }
-    #contact input:focus,
-    #contact textarea:focus {
-      outline: none;
-      border-color: #888;
-      background: #2b2b2b;
-    }
-    #contact button {
-      background: #eee;
-      color: #121212;
-      font-weight: 700;
-      padding: 15px;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-    }
-    #contact button:hover {
-      background: #ccc;
-    }
-
-    /* Resume Download Button */
-    .resume-download {
-      background: #eee;
-      color: #121212;
-      font-weight: 700;
-      padding: 12px 28px;
-      border-radius: 30px;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      font-size: 0.9rem;
-      display: inline-block;
-      margin-bottom: 40px;
-      transition: background 0.3s ease;
-      cursor: pointer;
-      text-align: center;
-      user-select: none;
-    }
-    .resume-download:hover {
-      background: #ccc;
-    }
-
-    /* Education, Internship, Certification Sections */
-    .detail-list {
-      list-style: none;
-      padding-left: 0;
-      max-width: 700px;
-      color: #ccc;
-      font-size: 1.05rem;
-      line-height: 1.5;
-    }
-    .detail-list li {
-      margin-bottom: 14px;
-    }
-    .detail-list strong {
-      color: #eee;
-    }
-
-    /* Footer */
     footer {
       text-align: center;
-      padding: 20px 0;
-      font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #333;
-      background: #121212;
-    }
-
-    /* Responsive */
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        padding: 15px 20px;
-      }
-      nav a {
-        margin-left: 12px;
-        font-size: 0.9rem;
-      }
-      .hero h2 {
-        font-size: 2.2rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
-      #skills ul {
-        justify-content: center;
-      }
-      .project-card {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .project-image {
-        width: 100%;
-        height: auto;
-      }
+      padding: 2rem;
+      background: #111;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Arshad Ansari</h1>
+    <h1 style="color: white; font-weight: 800;">Arshad<span class="highlight">.</span></h1>
     <nav>
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#internship">Internship</a>
-      <a href="#certifications">Certifications</a>
+      <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main class="container">
-    <section class="hero" id="hero">
-      <h2>Data Scientist & AI Engineer</h2>
-      <p>Transforming raw data into actionable insights. Passionate about machine learning, AI, and data analysis.</p>
-      <!-- Resume Download Button -->
-      <a href="resume-arshad-ansari.pdf" download class="resume-download" aria-label="Download Resume">Download Resume</a>
-      <a href="#contact" class="button" aria-label="Contact Me">Get in Touch</a>
-    </section>
+  <section class="hero">
+    <div class="hero-text">
+      <p>AI Engineer | Data Analyst</p>
+      <h1>Hi, I'm <span class="highlight">Arshad</span></h1>
+      <p>Driven by data, built on purpose.</p>
+      <a class="resume-btn" href="your_resume.pdf" download>Download Resume</a>
+    </div>
+    <div class="hero-img">
+      <img src="https://via.placeholder.com/350x400.png?text=Your+Photo" alt="Profile" />
+    </div>
+  </section>
 
-    <section id="about">
-      <h3>About Me</h3>
-      <p>
-        Hi, I’m Arshad — a passionate data scientist with expertise in machine learning, AI engineering, and data analysis. I love building predictive models, automating data workflows, and uncovering hidden patterns to drive smart business decisions.
-      </p>
-    </section>
+  <section class="section" id="about">
+    <h2>Education & Internships</h2>
+    <div class="info-block">
+      <p><strong>College:</strong> XYZ University, B.Tech in Computer Science, 2021–2025</p>
+      <p><strong>Internship:</strong> Data Analysis Intern at ABC Corp — Jan 2025 to Mar 2025</p>
+    </div>
+    <h2>Certifications</h2>
+    <div class="info-block">
+      <p>• Google Data Analytics Certificate</p>
+      <p>• IBM Machine Learning with Python</p>
+    </div>
+  </section>
 
-    <section id="skills">
-      <h3>Skills</h3>
-      <ul>
-        <li>Python</li>
-        <li>Pandas</li>
-        <li>Scikit-Learn</li>
-        <li>TensorFlow</li>
-        <li>SQL</li>
-        <li>Power BI</li>
-        <li>Data Visualization</li>
-        <li>Statistics</li>
-        <li>Flask</li>
-        <li>Git & GitHub</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h3>Projects</h3>
-
-      <a href="https://github.com/arshad396/stock-price-predictor" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Real-time Stock Price Predictor GitHub repository">
-        <img class="project-image" src="https://user-images.githubusercontent.com/123456789/placeholder-stock-predictor.png" alt="Real-time Stock Price Predictor project screenshot" />
-        <div class="project-content">
-          <h4>Real-time Stock Price Predictor</h4>
-          <p>Built a Flask API that scrapes and predicts stock prices using machine learning models with Yahoo Finance data.</p>
-          <span>View on GitHub →</span>
-        </div>
+  <section class="section" id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <a href="https://github.com/arshad396/project1" target="_blank">
+        <img src="https://via.placeholder.com/300x200.png?text=Project+1" alt="Project 1" />
       </a>
-
-      <a href="https://github.com/arshad396/customer-churn-analysis" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Customer Churn Analysis GitHub repository">
-        <img class="project-image" src="https://user-images.githubusercontent.com/123456789/placeholder-customer-churn.png" alt="Customer Churn Analysis project screenshot" />
-        <div class="project-content">
-          <h4>Customer Churn Analysis</h4>
-          <p>Performed exploratory data analysis and built classification models to predict customer churn and improve retention strategies.</p>
-          <span>View on GitHub →</span>
-        </div>
+      <a href="https://github.com/arshad396/project2" target="_blank">
+        <img src="https://via.placeholder.com/300x200.png?text=Project+2" alt="Project 2" />
       </a>
-
-      <a href="https://github.com/arshad396/powerbi-dashboards" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Interactive Power BI Dashboards GitHub repository">
-        <img class="project-image" src="https://user-images.githubusercontent.com/123456789/placeholder-powerbi-dashboards.png" alt="Interactive Power BI Dashboards project screenshot" />
-        <div class="project-content">
-          <h4>Interactive Power BI Dashboards</h4>
-          <p>Designed interactive business intelligence dashboards to visualize key performance metrics and trends.</p>
-          <span>View on GitHub →</span>
-        </div>
+      <a href="https://github.com/arshad396/project3" target="_blank">
+        <img src="https://via.placeholder.com/300x200.png?text=Project+3" alt="Project 3" />
       </a>
+    </div>
+  </section>
 
-    </section>
-
-    <section id="education">
-      <h3>Education</h3>
-      <ul class="detail-list">
-        <li><strong>Bachelor of Technology (B.Tech)</strong> — Computer Science Engineering<br />XYZ College of Engineering, Hyderabad (2018 - 2022)</li>
-      </ul>
-    </section>
-
-    <section id="internship">
-      <h3>Internship</h3>
-      <ul class="detail-list">
-        <li><strong>Data Analysis Intern</strong> — Mayerfeld Consulting (June 2024 - August 2024)<br />
-        Analyzed data sets to provide actionable business insights and created automation scripts to streamline reporting.</li>
-      </ul>
-    </section>
-
-    <section id="certifications">
-      <h3>Certifications</h3>
-      <ul class="detail-list">
-        <li><strong>Data Science Professional Certificate</strong> — Coursera</li>
-        <li><strong>Machine Learning Specialization</strong> — Stanford University</li>
-        <li><strong>Power BI Data Analyst Associate</strong> — Microsoft</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h3>Contact Me</h3>
-      <form action="mailto:arshad.ansari@email.com" method="post" enctype="text/plain" novalidate>
-        <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
-        <input type="email" name="email" placeholder="Your Email" required autocomplete="email" />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>Email: your.email@example.com</p>
+    <p>LinkedIn: linkedin.com/in/arshad396</p>
+  </section>
 
   <footer>
-    &copy; 2025 Arshad Ansari — Built with minimal design
+    <p>&copy; 2025 Arshad. Built with simplicity.</p>
   </footer>
 </body>
 </html>
+
 
 
 
