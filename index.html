@@ -100,6 +100,7 @@
       text-transform: uppercase;
       font-size: 0.9rem;
       letter-spacing: 1.5px;
+      margin-bottom: 20px;
     }
     .hero a.button:hover {
       background: #ccc;
@@ -248,6 +249,43 @@
       background: #ccc;
     }
 
+    /* Resume Download Button */
+    .resume-download {
+      background: #eee;
+      color: #121212;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-size: 0.9rem;
+      display: inline-block;
+      margin-bottom: 40px;
+      transition: background 0.3s ease;
+      cursor: pointer;
+      text-align: center;
+      user-select: none;
+    }
+    .resume-download:hover {
+      background: #ccc;
+    }
+
+    /* Education, Internship, Certification Sections */
+    .detail-list {
+      list-style: none;
+      padding-left: 0;
+      max-width: 700px;
+      color: #ccc;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+    .detail-list li {
+      margin-bottom: 14px;
+    }
+    .detail-list strong {
+      color: #eee;
+    }
+
     /* Footer */
     footer {
       text-align: center;
@@ -295,6 +333,9 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#internship">Internship</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -303,6 +344,8 @@
     <section class="hero" id="hero">
       <h2>Data Scientist & AI Engineer</h2>
       <p>Transforming raw data into actionable insights. Passionate about machine learning, AI, and data analysis.</p>
+      <!-- Resume Download Button -->
+      <a href="resume-arshad-ansari.pdf" download class="resume-download" aria-label="Download Resume">Download Resume</a>
       <a href="#contact" class="button" aria-label="Contact Me">Get in Touch</a>
     </section>
 
@@ -333,7 +376,7 @@
       <h3>Projects</h3>
 
       <a href="https://github.com/arshad396/stock-price-predictor" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Real-time Stock Price Predictor GitHub repository">
-        <img class="project-image" src="https://via.placeholder.com/280x180?text=Stock+Price+Predictor" alt="Real-time Stock Price Predictor project screenshot" />
+        <img class="project-image" src="https://user-images.githubusercontent.com/123456789/placeholder-stock-predictor.png" alt="Real-time Stock Price Predictor project screenshot" />
         <div class="project-content">
           <h4>Real-time Stock Price Predictor</h4>
           <p>Built a Flask API that scrapes and predicts stock prices using machine learning models with Yahoo Finance data.</p>
@@ -342,7 +385,7 @@
       </a>
 
       <a href="https://github.com/arshad396/customer-churn-analysis" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Customer Churn Analysis GitHub repository">
-        <img class="project-image" src="https://via.placeholder.com/280x180?text=Customer+Churn+Analysis" alt="Customer Churn Analysis project screenshot" />
+        <img class="project-image" src="https://user-images.githubusercontent.com/123456789/placeholder-customer-churn.png" alt="Customer Churn Analysis project screenshot" />
         <div class="project-content">
           <h4>Customer Churn Analysis</h4>
           <p>Performed exploratory data analysis and built classification models to predict customer churn and improve retention strategies.</p>
@@ -351,7 +394,7 @@
       </a>
 
       <a href="https://github.com/arshad396/powerbi-dashboards" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Interactive Power BI Dashboards GitHub repository">
-        <img class="project-image" src="https://via.placeholder.com/280x180?text=Power+BI+Dashboards" alt="Interactive Power BI Dashboards project screenshot" />
+        <img class="project-image" src="https://user-images.githubusercontent.com/123456789/placeholder-powerbi-dashboards.png" alt="Interactive Power BI Dashboards project screenshot" />
         <div class="project-content">
           <h4>Interactive Power BI Dashboards</h4>
           <p>Designed interactive business intelligence dashboards to visualize key performance metrics and trends.</p>
@@ -359,6 +402,30 @@
         </div>
       </a>
 
+    </section>
+
+    <section id="education">
+      <h3>Education</h3>
+      <ul class="detail-list">
+        <li><strong>Bachelor of Technology (B.Tech)</strong> — Computer Science Engineering<br />XYZ College of Engineering, Hyderabad (2018 - 2022)</li>
+      </ul>
+    </section>
+
+    <section id="internship">
+      <h3>Internship</h3>
+      <ul class="detail-list">
+        <li><strong>Data Analysis Intern</strong> — Mayerfeld Consulting (June 2024 - August 2024)<br />
+        Analyzed data sets to provide actionable business insights and created automation scripts to streamline reporting.</li>
+      </ul>
+    </section>
+
+    <section id="certifications">
+      <h3>Certifications</h3>
+      <ul class="detail-list">
+        <li><strong>Data Science Professional Certificate</strong> — Coursera</li>
+        <li><strong>Machine Learning Specialization</strong> — Stanford University</li>
+        <li><strong>Power BI Data Analyst Associate</strong> — Microsoft</li>
+      </ul>
     </section>
 
     <section id="contact">
@@ -377,5 +444,6 @@
   </footer>
 </body>
 </html>
+
 
 
