@@ -31,6 +31,7 @@
     }
     .hero {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       padding: 5rem 2rem;
@@ -88,6 +89,34 @@
       padding: 2rem;
       background: #111;
     }
+    .contact-info p,
+    .contact-info a {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      color: #ddd;
+      display: block;
+    }
+    .message-form {
+      margin-top: 2rem;
+      max-width: 500px;
+    }
+    .message-form input,
+    .message-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
+    }
+    .message-form button {
+      background-color: #f50057;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -101,12 +130,12 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" id="resume">
     <div class="hero-text">
       <p>Data Analyst | AI Enthusiast</p>
       <h1>Hi, I'm <span class="highlight">Arshad</span></h1>
       <p>Driven by data, built on purpose.</p>
-      <a class="resume-btn" href="https://drive.google.com/file/d/1mndUAmaWy6Gzqs2jgiP6w9D3k8wiS0Yb/view?usp=sharing" target="_blank">View Resume</a>
+      <a class="resume-btn" href="https://drive.google.com/file/d/1BRLtQnbOkw1EWNcCzvBVjrFHBPCU6v1b/view?usp=drive_link" target="_blank">Download Resume</a>
     </div>
     <div class="hero-img">
       <img src="https://via.placeholder.com/350x400.png?text=Shaik+Arshad" alt="Profile" />
@@ -160,10 +189,22 @@
 
   <section class="section" id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:arshadshaik396@gmail.com">arshadshaik396@gmail.com</a></p>
-    <p>Phone: <a href="tel:+919182920820">+91 91829 20820</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/shaikarshadansari/" target="_blank">linkedin.com/in/shaikarshadansari</a></p>
-    <p>GitHub: <a href="https://github.com/Arshad396" target="_blank">github.com/Arshad396</a></p>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:arshadshaik396@gmail.com">arshadshaik396@gmail.com</a></p>
+      <p>Phone: <a href="tel:+919182920820">+91 91829 20820</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/shaikarshadansari/" target="_blank">linkedin.com/in/shaikarshadansari</a></p>
+      <p>GitHub: <a href="https://github.com/Arshad396" target="_blank">github.com/Arshad396</a></p>
+    </div>
+
+    <div class="message-form">
+      <h3>Send me a message</h3>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
   </section>
 
   <footer>
