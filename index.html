@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arshad Ansari | AI & Data Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -44,9 +45,11 @@
       margin: 0 1rem;
       text-decoration: none;
       border-bottom: 1px solid transparent;
+      transition: 0.3s ease;
     }
     nav a:hover {
       border-color: #00ffd0;
+      opacity: 0.8;
     }
     section {
       max-width: 800px;
@@ -54,7 +57,11 @@
       padding: 1.5rem;
       background: #1a1c23;
       border-radius: 12px;
-      box-shadow: 0 0 10px #00ffd033;
+      box-shadow: 0 0 15px #00ffd044;
+      transition: transform 0.3s ease;
+    }
+    section:hover {
+      transform: scale(1.01);
     }
     .project {
       margin-bottom: 1.5rem;
@@ -75,10 +82,24 @@
       margin-top: 4rem;
       color: #555;
     }
+    .resume-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      border: 1px solid #00ffd0;
+      color: #00ffd0;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .resume-button:hover {
+      background: #00ffd0;
+      color: #0f1117;
+    }
   </style>
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <h1>Arshad Ansari</h1>
     <p>AI | Machine Learning | Data Analytics | Automation</p>
     <nav>
@@ -87,16 +108,17 @@
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a href="resume.pdf" class="resume-button" target="_blank">Download Resume</a>
   </header>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>
       I specialize in building scalable data pipelines and machine learning models that create real-world value. With a passion for clean design, explainable AI, and automation, I love transforming raw data into powerful insights. My goal is to create solutions that are not just intelligent but also intuitive and responsible.
     </p>
   </section>
 
-  <section id="projects">
+  <section id="projects" data-aos="fade-up">
     <h2>Featured Projects</h2>
     <div class="project">
       <h3>Intelligent Resume Parser</h3>
@@ -112,7 +134,7 @@
     </div>
   </section>
 
-  <section id="skills">
+  <section id="skills" data-aos="fade-up">
     <h2>Technical Stack</h2>
     <ul>
       <li>Languages: Python, SQL</li>
@@ -123,15 +145,20 @@
     </ul>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact</h2>
     <p>Email: arshad.ansari@email.com</p>
     <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
   </section>
 
-  <footer>
+  <footer data-aos="fade-up">
     <p>&copy; 2025 Arshad Ansari. Designed with clarity and impact.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
