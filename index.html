@@ -2,97 +2,345 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shaik Arshad Ansari | Data Analyst & AI Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arshad Ansari | Data Scientist & AI Engineer</title>
   <style>
-    /* [Same CSS as before for brevity] */
+    /* Reset & basics */
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: #0f1624;
+      color: #e0e6f1;
+      line-height: 1.6;
+      font-size: 18px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      color: #66fcf1;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #45a29e;
+    }
+
+    /* Container */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex-grow: 1;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #1f2a40;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      color: #66fcf1;
+    }
+    nav a {
+      margin-left: 25px;
+      font-weight: 600;
+      letter-spacing: 1.1px;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 75vh;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #45a29e;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      animation-delay: 0.2s;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: #a0bcd6;
+      margin-bottom: 30px;
+      max-width: 600px;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      animation-delay: 0.4s;
+    }
+    .hero a.button {
+      background: #66fcf1;
+      color: #0f1624;
+      font-weight: 700;
+      padding: 15px 30px;
+      border-radius: 50px;
+      box-shadow: 0 8px 20px rgba(102,252,241,0.5);
+      transition: background 0.3s ease;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      animation-delay: 0.6s;
+    }
+    .hero a.button:hover {
+      background: #45a29e;
+      box-shadow: 0 8px 20px rgba(69,162,158,0.6);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 80px;
+    }
+    section h3 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: #66fcf1;
+      border-bottom: 2px solid #45a29e;
+      padding-bottom: 8px;
+      max-width: fit-content;
+    }
+
+    /* About Me */
+    #about p {
+      max-width: 700px;
+      font-size: 1.1rem;
+      color: #c1d1e8;
+      line-height: 1.7;
+    }
+
+    /* Skills */
+    #skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    #skills li {
+      background: #1f2a40;
+      padding: 10px 18px;
+      border-radius: 20px;
+      font-weight: 600;
+      color: #66fcf1;
+      box-shadow: 0 3px 8px rgba(102,252,241,0.3);
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    #skills li:hover {
+      transform: scale(1.1);
+      color: #45a29e;
+    }
+
+    /* Projects */
+    #projects .project-card {
+      background: #1f2a40;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+      transition: box-shadow 0.3s ease;
+    }
+    #projects .project-card:hover {
+      box-shadow: 0 6px 25px rgba(69,162,158,0.7);
+    }
+    #projects .project-card h4 {
+      color: #66fcf1;
+      margin-bottom: 8px;
+    }
+    #projects .project-card p {
+      color: #a0bcd6;
+      margin-bottom: 12px;
+    }
+    #projects .project-card a {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #45a29e;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    #projects .project-card a:hover {
+      border-color: #45a29e;
+    }
+
+    /* Contact */
+    #contact form {
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    #contact input,
+    #contact textarea {
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      background: #16202e;
+      color: #c1d1e8;
+      resize: none;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.7);
+      transition: background 0.3s ease;
+    }
+    #contact input:focus,
+    #contact textarea:focus {
+      outline: none;
+      background: #0f1624;
+      box-shadow: 0 0 8px #66fcf1;
+    }
+    #contact button {
+      background: #66fcf1;
+      color: #0f1624;
+      font-weight: 700;
+      padding: 15px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #contact button:hover {
+      background: #45a29e;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      color: #4c5c72;
+      background: #1f2a40;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        padding: 15px 20px;
+      }
+      nav a {
+        margin-left: 12px;
+        font-size: 0.9rem;
+      }
+      .hero h2 {
+        font-size: 2.4rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      #skills ul {
+        justify-content: center;
+      }
+    }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header data-aos="fade-down">
-    <h1>Shaik Arshad Ansari</h1>
-    <p>Data Analyst | AI & Machine Learning Enthusiast | Product Optimization</p>
+  <header>
+    <h1>Arshad Ansari</h1>
     <nav>
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
-      <a href="#certifications">Certifications</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="https://drive.google.com/file/d/1mndUAmaWy6Gzqs2jgiP6w9D3k8wiS0Yb/view" class="resume-button" target="_blank">Download Resume</a>
   </header>
 
-  <section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>
-      Analytical and detail-driven Data Analyst with hands-on experience in digital product analytics, marketing optimization,
-      and delivering actionable insights. Skilled in SQL, Python, and Power BI with experience in large-scale data, cloud platforms (Azure),
-      and tools like Spark and Databricks. Eager to contribute to impactful analytics, experimentation, and scalable AI applications.
-    </p>
-  </section>
+  <main class="container">
+    <section class="hero" id="hero">
+      <h2>Data Scientist & AI Engineer</h2>
+      <p>Transforming raw data into actionable insights. Passionate about machine learning, AI, and data analysis.</p>
+      <a href="#contact" class="button" aria-label="Contact Me">Get in Touch</a>
+    </section>
 
-  <section id="projects" data-aos="fade-up">
-    <h2>Featured Projects</h2>
-    <div class="project">
-      <h3>Web Scraping & Automation</h3>
-      <p>Scraped real estate and finance data using BeautifulSoup & Selenium. Automated data pipelines and structured datasets for analysis.</p>
-      <a href="https://github.com/Arshad396/Web-Scrapping-Projects" target="_blank">View Code →</a>
-    </div>
-    <div class="project">
-      <h3>A/B Testing – Marketing Campaign</h3>
-      <p>Designed and executed A/B tests with Python to assess digital ad performance, analyze conversion rate uplift, and inform strategy.</p>
-      <a href="https://github.com/Arshad396/ML-and-DL-Projects/blob/main/Data%20Visualization%20Project/Project_3/README%20(10).md" target="_blank">View Code →</a>
-    </div>
-    <div class="project">
-      <h3>Excel Dashboard</h3>
-      <p>Created automated Excel dashboards using PivotTables, macros, and alerts to visualize high-cost variances across departments.</p>
-      <a href="https://github.com/Arshad396/Excel-Projects" target="_blank">View Code →</a>
-    </div>
-    <div class="project">
-      <h3>Power BI Dashboarding</h3>
-      <p>Built dynamic dashboards using DAX, drill-throughs, and metrics visualization to uncover sales and engagement patterns.</p>
-      <a href="https://github.com/Arshad396/Tableau-and-Power-BI-Projects" target="_blank">View Code →</a>
-    </div>
-  </section>
+    <section id="about">
+      <h3>About Me</h3>
+      <p>
+        Hi, I’m Arshad — a passionate data scientist with expertise in machine learning, AI engineering, and data analysis. I love building predictive models, automating data workflows, and uncovering hidden patterns to drive smart business decisions.
+      </p>
+    </section>
 
-  <section id="skills" data-aos="fade-up">
-    <h2>Technical Stack</h2>
-    <ul>
-      <li>Languages: Python (Pandas, NumPy), SQL, HiveQL (basic)</li>
-      <li>Analytics: A/B Testing, KPI Reporting, Funnel Analysis, Stakeholder Dashboards</li>
-      <li>Visualization: Power BI, Excel (Macros), Matplotlib</li>
-      <li>Tools: Spark (basic), Azure DataBricks, Azure ML Pipelines</li>
-      <li>Collaboration: Insight Storytelling, Performance Reporting, Cross-functional Workflows</li>
-    </ul>
-  </section>
+    <section id="skills">
+      <h3>Skills</h3>
+      <ul>
+        <li>Python</li>
+        <li>Pandas</li>
+        <li>Scikit-Learn</li>
+        <li>TensorFlow</li>
+        <li>SQL</li>
+        <li>Power BI</li>
+        <li>Data Visualization</li>
+        <li>Statistics</li>
+        <li>Flask</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
 
-  <section id="certifications" data-aos="fade-up">
-    <h2>Certifications</h2>
-    <ul>
-      <li><a href="https://drive.google.com/drive/folders/1Qvgr8ZG_LolDBd-cIyefMVQN4tqimrTm?usp=sharing" target="_blank">Google Data Analytics Certification</a></li>
-      <li><a href="https://drive.google.com/drive/folders/1kWSTnl3-m460D1ypmiCxpuAbXZvZDeVb?usp=sharing" target="_blank">SQL Certifications – HackerRank</a></li>
-      <li><a href="https://drive.google.com/drive/folders/1Qvgr8ZG_LolDBd-cIyefMVQN4tqimrTm?usp=sharing" target="_blank">Forage Data Analyst Experience</a></li>
-    </ul>
-  </section>
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="project-card">
+        <h4>Real-time Stock Price Predictor</h4>
+        <p>Built a Flask API that scrapes and predicts stock prices using machine learning models with Yahoo Finance data.</p>
+        <a href="https://github.com/arshad396/stock-price-predictor" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h4>Customer Churn Analysis</h4>
+        <p>Performed exploratory data analysis and built classification models to predict customer churn and improve retention strategies.</p>
+        <a href="https://github.com/arshad396/customer-churn-analysis" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h4>Interactive Power BI Dashboards</h4>
+        <p>Designed interactive business intelligence dashboards to visualize key performance metrics and trends.</p>
+        <a href="https://github.com/arshad396/powerbi-dashboards" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+    </section>
 
-  <section id="contact" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:arshadshaik396@gmail.com">arshadshaik396@gmail.com</a></p>
-    <p>Phone: <a href="tel:+919182920820">+91 91829 20820</a></p>
-    <p>GitHub: <a href="https://github.com/Arshad396" target="_blank">github.com/Arshad396</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/shaikarshadansari" target="_blank">linkedin.com/in/shaikarshadansari</a></p>
-  </section>
+    <section id="contact">
+      <h3>Contact Me</h3>
+      <form action="mailto:arshad.ansari@email.com" method="post" enctype="text/plain" novalidate>
+        <input type="text" name="name" placeholder="Your Name" required autocomplete="name" />
+        <input type="email" name="email" placeholder="Your Email" required autocomplete="email" />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
 
-  <footer data-aos="fade-up">
-    <p>&copy; 2025 Shaik Arshad Ansari. Designed with clarity and impact.</p>
+  <footer>
+    &copy; 2025 Arshad Ansari — Built with ❤️ and Data
   </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </body>
 </html>
+
 
