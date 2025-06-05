@@ -15,7 +15,14 @@
     body {
       background-color: #000;
       color: #fff;
+      font-size: 18px;
+      line-height: 1.6;
     }
+   .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 2rem;
+}
     header {
       display: flex;
       justify-content: space-between;
@@ -25,17 +32,23 @@
     }
     nav a {
       color: #fff;
-      margin-left: 1.5rem;
+      margin-left: 2rem;
       text-decoration: none;
-      font-weight: 300;
+      font-weight: 400;
+      font-size: 1.1rem:
     }
     .hero {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      padding: 5rem 2rem;
+      padding: 6rem 2rem;
     }
+
+    .hero-text {
+      max-width: 600px;
+    }
+    
     .hero-text h1 {
       font-size: 3rem;
       font-weight: 800;
@@ -45,9 +58,14 @@
       color: #f50057;
     }
     .hero-text p {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       margin-bottom: 2rem;
     }
+
+    .highlight {
+      color: #f50057;
+    }
+    
     .resume-btn {
       padding: 0.75rem 1.5rem;
       background-color: #f50057;
@@ -57,69 +75,76 @@
       font-weight: bold;
     }
     .hero-img img {
-      width: 350px;
+      width: 400px;
+      max-width: 100%;
       border-radius: 10px;
     }
     .section {
-      padding: 4rem 2rem;
+      padding: 5rem 2rem;
     }
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
     }
     .projects img {
       width: 100%;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: transform 0.3s ease;
     }
     .projects img:hover {
       transform: scale(1.05);
     }
     h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
     }
     .info-block {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 2.5rem 1 rem;
       background: #111;
+      font-size: 1rem;
+      color: #aaa;
     }
+    
     .contact-info p,
     .contact-info a {
-      font-size: 1.1rem;
-      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      margin: 0.6rem 0;
       color: #ddd;
       display: block;
     }
     .message-form {
-      margin-top: 2rem;
-      max-width: 500px;
+      margin-top: 2.5rem;
+      max-width: 600px;
     }
     .message-form input,
     .message-form textarea {
       width: 100%;
-      padding: 0.75rem;
+      padding: 1rem;
       margin-bottom: 1rem;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
+      font-size: 1rem;
     }
     .message-form button {
       background-color: #f50057;
       color: #fff;
       border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 5px;
+      padding: 0.9rem 2rem;
+      border-radius: 6px;
       font-weight: bold;
       cursor: pointer;
+      font-size: 1rem;
     }
   </style>
 </head>
 <body>
+  <div class="container>
   <header>
     <h1 style="color: white; font-weight: 800;">Arshad<span class="highlight">.</span></h1>
     <nav>
