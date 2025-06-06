@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arshad | Data Analyst</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Inter', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     body {
       background-color: #000;
@@ -29,6 +33,9 @@
       align-items: center;
       padding: 1.5rem 2rem;
       background: #111;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
     nav a {
       color: #fff;
@@ -155,7 +162,7 @@
       </nav>
     </header>
 
-    <section class="hero" id="resume">
+    <section class="hero" id="resume" data-aos="fade-up">
       <div class="hero-text">
         <p>Data Analyst | AI Enthusiast</p>
         <h1>Hi, I'm <span class="highlight">Arshad</span></h1>
@@ -167,34 +174,7 @@
       </div>
     </section>
 
-    <section class="section" id="about">
-      <h2>Education</h2>
-      <div class="info-block">
-        <p><strong>M.Sc Data Science:</strong> Manipal Academy of Higher Education (2025 – Present)</p>
-        <p><strong>Machine Learning/AI:</strong> GUVI Geek Networks, IITM Research Park (2023 – 2024)</p>
-        <p><strong>M.Tech Construction Technology and Management:</strong> Koneru Lakshmaiah University (2019 – 2021)</p>
-        <p><strong>B.Tech Civil Engineering:</strong> Gudlavalleru Engineering College (2014 – 2018)</p>
-      </div>
-
-      <h2>Experience</h2>
-      <div class="info-block">
-        <p><strong>Data Analyst – Unified Mentor (Feb 2025 – Apr 2025)</strong></p>
-        <ul>
-          <li>Built dashboards with Power BI, SQL, Excel for campaign metrics</li>
-          <li>Performed root cause analysis and implemented data quality checks</li>
-          <li>Created reusable Python workflows and supported product experimentation</li>
-        </ul>
-      </div>
-
-      <h2>Certifications</h2>
-      <div class="info-block">
-        <p>• Google Data Analytics Certificate</p>
-        <p>• SQL - HackerRank Certification</p>
-        <p>• Forage - Data Analyst Certifications</p>
-      </div>
-    </section>
-
-    <section class="section" id="projects">
+    <section class="section" id="projects" data-aos="fade-up">
       <h2>Projects</h2>
       <div class="projects">
         <a href="https://github.com/Arshad396/Web-Scrapping-Projects" target="_blank">
@@ -204,15 +184,21 @@
           <img src="Excel project image 2.png" alt="Excel Dashboard Project" />
         </a>
         <a href="https://github.com/Arshad396/Tableau-and-Power-BI-Projects" target="_blank">
-          <img src="Power BI and tableau image.png" alt="Power BI Project" />
+          <img src="Power BI and tableau image.png" alt="Power BI and Tableau Project" />
         </a>
-        <a href="https://github.com/Arshad396/ML-and-DL-Projects/blob/main/Data%20Visualization%20Project/Project_3/README%20(10).md" target="_blank">
-          <img src="ml&dp pprojects.png" alt="ML and Dp project" />
+        <a href="https://github.com/Arshad396/ML-and-DL-Projects" target="_blank">
+          <img src="ml&dp pprojects.png" alt="ML & Data Processing Project" />
+        </a>
+        <a href="https://github.com/Arshad396/SQL-Projects" target="_blank">
+          <img src="sql project image.png" alt="SQL Project" />
+        </a>
+        <a href="https://github.com/Arshad396/AB-Testing-Projects" target="_blank">
+          <img src="hypothesis testing project image.png" alt="A/B Testing Project" />
         </a>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <section class="section" id="contact" data-aos="fade-up">
       <h2>Contact</h2>
       <div class="contact-info">
         <p>Email: <a href="mailto:arshadshaik396@gmail.com">arshadshaik396@gmail.com</a></p>
@@ -220,7 +206,6 @@
         <p>LinkedIn: <a href="https://www.linkedin.com/in/shaikarshadansari/" target="_blank">linkedin.com/in/shaikarshadansari</a></p>
         <p>GitHub: <a href="https://github.com/Arshad396" target="_blank">github.com/Arshad396</a></p>
       </div>
-
       <div class="message-form">
         <h3>Send me a message</h3>
         <form>
@@ -236,6 +221,11 @@
       <p>&copy; 2025 Shaik Arshad Ansari. Built with simplicity.</p>
     </footer>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
 
