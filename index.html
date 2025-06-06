@@ -23,9 +23,9 @@
       line-height: 1.7;
     }
     .container {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 2rem;
+      padding: 2.5rem;
     }
     header {
       display: flex;
@@ -55,7 +55,7 @@
       max-width: 600px;
     }
     .hero-text h1 {
-      font-size: 3.75rem;
+      font-size: 4rem;
       font-weight: 800;
       margin-bottom: 1rem;
     }
@@ -76,17 +76,21 @@
       font-size: 1.1rem;
     }
     .hero-img img {
-      width: 400px;
+      width: 420px;
       max-width: 100%;
       border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
     }
     .section {
       padding: 5rem 2rem;
     }
     h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
+      font-size: 2.75rem;
+      margin-bottom: 2rem;
       font-weight: 700;
+      border-bottom: 2px solid #f50057;
+      display: inline-block;
+      padding-bottom: 0.5rem;
     }
     .info-block p,
     .info-block li {
@@ -106,6 +110,20 @@
     }
     .projects img:hover {
       transform: scale(1.05);
+    }
+    .certifications {
+      background-color: #111;
+      padding: 4rem 2rem;
+      margin: 4rem 0;
+      border-radius: 10px;
+    }
+    .certifications ul {
+      list-style-type: disc;
+      padding-left: 2rem;
+    }
+    .certifications li {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
     }
     footer {
       text-align: center;
@@ -157,6 +175,7 @@
       <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
         <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -196,6 +215,16 @@
           <img src="hypothesis testing project image.png" alt="A/B Testing Project" />
         </a>
       </div>
+    </section>
+
+    <section class="section certifications" id="certifications" data-aos="fade-up">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Google Data Analytics Certificate</li>
+        <li>SQL Certification – HackerRank</li>
+        <li>Data Analyst Virtual Experience – Forage</li>
+        <li>IBM Machine Learning with Python</li>
+      </ul>
     </section>
 
     <section class="section" id="contact" data-aos="fade-up">
